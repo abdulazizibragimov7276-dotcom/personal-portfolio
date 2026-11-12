@@ -61,10 +61,12 @@ if (nameInput && emailInput && messageInputContact && sendButton) {
       return
     }
 
-    if (!email.includes('@')) {
-      alert('Email manzilingizni to‘g‘ri kiriting!')
-      return
-    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+if (!emailPattern.test(email)) {
+  alert('Email manzilingizni to‘g‘ri kiriting!')
+  return
+}
 
     alert(`Rahmat, ${name}! Xabaringiz yuborildi.`)
 
