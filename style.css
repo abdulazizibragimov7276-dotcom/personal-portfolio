@@ -74,7 +74,7 @@ header button,
 .work {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--primary)
+  background-color: var(--primary);
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -300,13 +300,13 @@ main {
   margin-bottom: 15px;
 }
 
-.interests > div {
+.interests > ul {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.interests span {
+.interests li {
   padding: 7px 14px;
 
   background-color: #f0ebff;
@@ -547,7 +547,7 @@ footer p {
   margin-bottom: 15px;
 }
 
-footer div {
+footer nav {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -727,7 +727,7 @@ footer a:hover {
     flex-wrap: wrap;
   }
 
-  footer div {
+  footer nav {
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -737,4 +737,10 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+.counter-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
 }
