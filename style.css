@@ -1,4 +1,4 @@
-css
+
 /* =========================
    GENERAL
 ========================= */
@@ -17,6 +17,11 @@ css
   --border: #e8e8e8;
   --background: #f8f7fc;
   --white: #ffffff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 body {
@@ -69,7 +74,7 @@ header button,
 .work {
   display: inline-block;
   text-decoration: none;
-  background-color: #4f00e8;
+  background-color: var(--primary)
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -638,4 +643,98 @@ footer a {
     font-size: 13px;
   }
 
+}
+/* =========================
+   SELECTORS & STATES
+========================= */
+
+.counter-buttons button:hover:not(:disabled) {
+  background-color: #f0ebff;
+  border-color: var(--primary);
+}
+
+.counter-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
+}
+
+.technologies > span:first-child {
+  font-weight: 700;
+}
+
+.conact label + input,
+.conact label + textarea {
+  margin-top: 2px;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   EXTRA RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .about-intro h1 {
+    font-size: 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .about-profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .skills,
+  .counter-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 25px 15px;
+    gap: 25px;
+  }
+
+  .hero-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .about-info,
+  .conact,
+  .ijtimoiy {
+    padding: 20px 15px;
+  }
+
+  .counter-buttons {
+    flex-wrap: wrap;
+  }
+
+  footer div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ijtimoiy {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -1,5 +1,3 @@
-
-
 // ====================
 // HOME COUNTER
 // ====================
@@ -11,23 +9,32 @@ const plusButton = document.querySelector('.counter-buttons button:nth-child(3)'
 
 let count = 0
 
+function updateCounter() {
+  counterNumber.textContent = count
+  minusButton.disabled = count <= 0
+  resetButton.disabled = count === 0
+}
+
 if (counterNumber && minusButton && resetButton && plusButton) {
   plusButton.addEventListener('click', () => {
     count++
-    counterNumber.textContent = count
+    updateCounter()
   })
 
   minusButton.addEventListener('click', () => {
-    count--
-    counterNumber.textContent = count
+    if (count > 0) {
+      count--
+      updateCounter()
+    }
   })
 
   resetButton.addEventListener('click', () => {
     count = 0
-    counterNumber.textContent = count
+    updateCounter()
   })
-}
 
+  updateCounter() // boshlang'ich disabled holati
+}
 
 // ====================
 // ABOUT CHARACTER COUNTER
@@ -41,6 +48,7 @@ if (messageInput && characterCount) {
     characterCount.textContent = messageInput.value.length
   })
 }
+
 // ====================
 // CONTACT FORM
 // ====================
@@ -49,6 +57,8 @@ const nameInput = document.querySelector('#ism')
 const emailInput = document.querySelector('#email')
 const messageInputContact = document.querySelector('#matin')
 const sendButton = document.querySelector('.conact button')
+
+const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/
 
 if (nameInput && emailInput && messageInputContact && sendButton) {
   sendButton.addEventListener('click', () => {
@@ -61,12 +71,20 @@ if (nameInput && emailInput && messageInputContact && sendButton) {
       return
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (name.length < 2) {
+      alert('Ism kamida 2 ta harfdan iborat bo‘lishi kerak!')
+      return
+    }
 
-if (!emailPattern.test(email)) {
-  alert('Email manzilingizni to‘g‘ri kiriting!')
-  return
-}
+    if (!emailPattern.test(email)) {
+      alert('Email manzilingizni to‘g‘ri kiriting! Masalan: ism@gmail.com')
+      return
+    }
+
+    if (message.length < 10) {
+      alert('Xabar kamida 10 ta belgidan iborat bo‘lishi kerak!')
+      return
+    }
 
     alert(`Rahmat, ${name}! Xabaringiz yuborildi.`)
 
