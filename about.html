@@ -3,35 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Men haqimda | Abdulaziz</title>
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <div class="logo">
-        Abdulaziz Portfoliosi
-      </div>
+      <div class="logo">Abdulaziz Portfoliosi</div>
 
       <nav>
         <a href="index.html">Asosiy</a>
-        <a href="about.html">Men Haqimda</a>
+        <a href="about.html">Men haqimda</a>
         <a href="contact.html">Kontakt</a>
       </nav>
 
-      <button>Meni yollang</button>
+      <a href="contact.html" class="work">Meni yollang</a>
     </header>
 
     <!-- Main -->
     <main>
       <!-- About title -->
       <section class="about-intro">
-        <h1>Men Haqimda</h1>
+        <h1>Men haqimda</h1>
 
         <p>
           Toza va zamonaviy interfeyslar yaratishga ishtiyoqli
-          foydali dasturchi Abdulaziz bilan tanishing.
+          dasturchi Abdulaziz bilan tanishing.
         </p>
       </section>
 
@@ -47,40 +45,40 @@
 
             <p>
               Salom! Men Abdulazizman. Men oddiy, funksional va
-              vizual jihatdan jozibali web-saytlarni yaratishni
+              vizual jihatdan jozibali veb-saytlar yaratishni
               yoqtiraman.
             </p>
 
             <p>
-              Menda yangi texnologiyalarni organish orqali
+              Menda yangi texnologiyalarni o‘rganish orqali
               mahoratimni doimiy ravishda takomillashtirishga
               kuchli ishtiyoq bor.
             </p>
 
             <p>
-              Mening maqsadim foydalanuvchilar oson ishlashi
-              yoqtiradigan raqamli mahsulotlarni yaratishdir.
+              Mening maqsadim foydalanuvchilar oson ishlatadigan
+              va yoqtiradigan raqamli mahsulotlarni yaratishdir.
             </p>
           </div>
         </div>
 
         <!-- Interests -->
         <div class="interests">
-          <h2> Mening qiziqishlarim</h2>
+          <h2>Mening qiziqishlarim</h2>
 
-          <div>
-            <span>Koding</span>
-            <span>Oqish</span>
-            <span>Musiqa</span>
-            <span>Sayohat</span>
-          </div>
+          <ul>
+            <li>Koding</li>
+            <li>O‘qish</li>
+            <li>Musiqa</li>
+            <li>Sayohat</li>
+          </ul>
         </div>
       </section>
 
       <!-- Skills and counter -->
       <section class="about-bottom">
         <div class="skills">
-          <h2>Texnik Bilimlar</h2>
+          <h2>Texnik bilimlar</h2>
 
           <div class="skill">
             <div>
@@ -116,17 +114,18 @@
           </div>
         </div>
 
-        <!-- Counter -->
+        <!-- Character counter -->
         <div class="counter-box">
-          <h2>TT Mini Funksiya: Belgilar sanovchi</h2>
+          <h2>Mini funksiya: Belgilar sanovchi</h2>
 
           <p>
-            Belgilar sonining dinamik ravishda yangilanishini
-            korish uchun quyidagi matn maydoniga yozing
-            (korinishi).
+            Belgilar sonining real vaqtda yangilanishini
+            ko‘rish uchun quyidagi maydonga yozing.
           </p>
 
+          <label for="xabar">Matn</label>
           <textarea
+            id="xabar"
             placeholder="Xabaringizni shu yerga yozing..."
           ></textarea>
 
@@ -140,16 +139,14 @@
 
     <!-- Footer -->
     <footer>
-      <h3>Amethyst Portfolio</h3>
+      <h3>Abdulaziz Portfolio</h3>
 
-      <p>
-        © 2026 Portfolio. Barcha huquqlar himoyalangan.
-      </p>
+      <p>© 2026 Portfolio. Barcha huquqlar himoyalangan.</p>
 
-      <div>
+      <nav aria-label="Footer">
         <a href="#">Maxfiylik siyosati</a>
-        <a href="#">Xizmat korsatish shartlari</a>
-      </div>
+        <a href="#">Xizmat ko‘rsatish shartlari</a>
+      </nav>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
